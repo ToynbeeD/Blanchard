@@ -20,31 +20,21 @@
   <script src="/js/choices.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
-  <script>
-    $(function () {
-      $("#accordion-rus").accordion({
-        collapsible: true,
-        active: 0,
-        heightStyle: "content"
-      });
-    });
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=вашAPI-ключ&lang=ru_RU"></script>
 
-    $(function () {
-      $("#accordion-italy").accordion({
-        collapsible: true,
-        active: 0,
-        heightStyle: "content"
-      });
-    });
-  </script>
+  <script src="/js/simplebar.min.js"></script>
+  <script src="/js/inputmask.min.js"></script>
+  <script src="/js/just-validate.min.js"></script>
+  <script src="/js/main.js"></script>
 </head>
 
 <body>
   <header class="header">
     <div class="header__top">
       <div class="container header__top-container">
-        <img class="header__logo-img" src="/img/header-logo.svg" alt="Blanchard - художественная галерея">
+        <a class="header__logo-link logo-link" href="#">
+          <img class="header__logo-img" src="/img/header-logo.svg" alt="Blanchard - художественная галерея">
+        </a>
         <nav class="header__nav">
           <ul class="header__nav-list ul-reset">
             <li class="header__nav-item">
@@ -76,96 +66,224 @@
     <div class="header__bottom">
       <div class="container header__bottom-container">
         <ul class="header__bottom-list ul-reset">
-          <li class="header__bottom-list-item">
-            <select data-simplebar class="header__bottom-select custom-select" name="header__bottom-select">
-              <option value="value0" selected disabled>Реализм</option>
-              <option value="value1">Тинторетто</option>
-              <option value="value2">Фридрих</option>
-              <option value="value3">Леонардо</option>
-              <option value="value4">Верроккьо</option>
-              <option value="value5">Тинторетто</option>
-              <option value="value6">Фридрих</option>
-              <option value="value7">Леонардо</option>
-              <option value="value8">Верроккьо</option>
-              <option value="value9">Тинторетто</option>
-              <option value="value10">Фридрих</option>
-              <option value="value11">Леонардо</option>
-              <option value="value12">Верроккьо</option>
-            </select>
+          <li class="header__dropdown">
+            <button class="header__dropdown-btn btn-reset">Реализм</button>
+            <ul class="header__dropdown-content ul-reset">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+            </ul>
           </li>
-          <li class="header__bottom-list-item">
-            <select class="header__bottom-select custom-select" name="header__bottom-select">
-              <option value="value0" selected disabled>Импрессионизм</option>
-              <option value="value1">Тинторетто</option>
-              <option value="value2">Фридрих</option>
-              <option value="value3">Леонардо</option>
-              <option value="value4">Верроккьо</option>
-              <option value="value5">Тинторетто</option>
-              <option value="value6">Фридрих</option>
-              <option value="value7">Леонардо</option>
-              <option value="value8">Верроккьо</option>
-              <option value="value9">Тинторетто</option>
-              <option value="value10">Фридрих</option>
-              <option value="value11">Леонардо</option>
-              <option value="value12">Верроккьо</option>
-            </select>
+          <li class="header__dropdown">
+            <button class="header__dropdown-btn btn-reset">Импрессионизм</button>
+            <ul class="header__dropdown-content ul-reset">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+            </ul>
           </li>
-          <li class="header__bottom-list-item">
-            <select class="header__bottom-select custom-select" name="header__bottom-select">
-              <option value="value0" selected disabled>Постимпрессионизм</option>
-              <option value="value1">Тинторетто</option>
-              <option value="value2">Фридрих</option>
-              <option value="value3">Леонардо</option>
-              <option value="value4">Верроккьо</option>
-              <option value="value5">Тинторетто</option>
-              <option value="value6">Фридрих</option>
-              <option value="value7">Леонардо</option>
-              <option value="value8">Верроккьо</option>
-              <option value="value9">Тинторетто</option>
-              <option value="value10">Фридрих</option>
-              <option value="value11">Леонардо</option>
-              <option value="value12">Верроккьо</option>
-            </select>
+          <li class="header__dropdown">
+            <button class="header__dropdown-btn btn-reset">Постимпрессионизм</button>
+            <ul class="header__dropdown-content ul-reset">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+            </ul>
           </li>
-          <li class="header__bottom-list-item">
-            <select class="header__bottom-select custom-select" name="header__bottom-select">
-              <option value="value0" selected disabled>Авангард</option>
-              <option value="value1">Тинторетто</option>
-              <option value="value2">Фридрих</option>
-              <option value="value3">Леонардо</option>
-              <option value="value4">Верроккьо</option>
-              <option value="value5">Тинторетто</option>
-              <option value="value6">Фридрих</option>
-              <option value="value7">Леонардо</option>
-              <option value="value8">Верроккьо</option>
-              <option value="value9">Тинторетто</option>
-              <option value="value10">Фридрих</option>
-              <option value="value11">Леонардо</option>
-              <option value="value12">Верроккьо</option>
-            </select>
+          <li class="header__dropdown">
+            <button class="header__dropdown-btn btn-reset">Авангард</button>
+            <ul class="header__dropdown-content ul-reset">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+            </ul>
           </li>
-          <li class="header__bottom-list-item">
-            <select class="header__bottom-select custom-select" name="header__bottom-select">
-              <option value="value0" selected disabled>Футуризм</option>
-              <option value="value1">Тинторетто</option>
-              <option value="value2">Фридрих</option>
-              <option value="value3">Леонардо</option>
-              <option value="value4">Верроккьо</option>
-              <option value="value5">Тинторетто</option>
-              <option value="value6">Фридрих</option>
-              <option value="value7">Леонардо</option>
-              <option value="value8">Верроккьо</option>
-              <option value="value9">Тинторетто</option>
-              <option value="value10">Фридрих</option>
-              <option value="value11">Леонардо</option>
-              <option value="value12">Верроккьо</option>
-            </select>
+          <li class="header__dropdown">
+            <button class="header__dropdown-btn btn-reset">Футуризм</button>
+            <ul class="header__dropdown-content ul-reset">
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Тинторетто</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Фридрих</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Леонардо</a>
+              </li>
+              <li class="header__dropdown-item">
+                <a class="header__dropdown-link a-reset" href="#catalog">Верроккьо</a>
+              </li>
+            </ul>
           </li>
         </ul>
-        <label class="header__search-label" action="">
-          <span class="header__search-span"></span>
-          <input class="header__search-input" type="text" placeholder="Поиск по сайту">
-        </label>
+        <form class="header__search-form">
+          <button class="header__search-btn btn-reset" type="submit">
+            <svg class="header__search-svg" width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="6.8678" height="1.71695"
+                transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12.0969 18C7.53041 18 3.99692 14.3229 3.99692 10C3.99692 5.67715 7.53041 2 12.0969 2C16.6634 2 20.1969 5.67715 20.1969 10C20.1969 14.3229 16.6634 18 12.0969 18ZM12.0969 20C6.57408 20 2.09692 15.5228 2.09692 10C2.09692 4.47715 6.57408 0 12.0969 0C17.6198 0 22.0969 4.47715 22.0969 10C22.0969 15.5228 17.6198 20 12.0969 20Z"
+                fill="white" />
+            </svg>
+          </button>
+          <input class="header__search-input" type="search" placeholder="Поиск по сайту">
+        </form>
       </div>
     </div>
   </header>
@@ -202,7 +320,7 @@
     <section id="about" class="about">
       <div class="container about__container">
         <h2 class="about__title h2-reset">О нас</h2>
-        <p class="about__description">
+        <p class="about__description p-reset">
           Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
           участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
           Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
@@ -216,249 +334,247 @@
     </section>
     <section id="gallery" class="gallery">
       <div class="container gallery__container">
-        <h2 class="gallery__title h2-reset">Галерея</h2>
-        <div class="gallery__content">
-          <div class="gallery__left-column">
-            <label class="gallery__filter">
-              <span class="gallery__filter-span">Фильтр:</span>
-              <select class="gallery__select custom-select" name="">
-                <option value="value0" selected>Живопись</option>
-                <option value="value1">Рисунок</option>
-                <option value="value2">Скульптура</option>
-              </select>
-            </label>
-            <p class="gallery__left-text p-reset">
-              Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-              <a class="gallery__left-link a-reset" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией.
-            </p>
+        <div class="gallery__left-column">
+          <h2 class="gallery__title h2-reset">Галерея</h2>
+          <label class="gallery__filter">
+            <span class="gallery__filter-span">Фильтр:</span>
+            <select class="gallery__select custom-select" name="gallery-select">
+              <option value="value0" selected>Живопись</option>
+              <option value="value1">Рисунок</option>
+              <option value="value2">Скульптура</option>
+            </select>
+          </label>
+          <p class="gallery__left-text p-reset">
+            Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+            <a class="gallery__left-link a-reset" href="#">авторизуйтесь,</a> либо воспользуйтесь лицензией.
+          </p>
+        </div>
+        <div class="gallery__slider-container">
+          <div class="swiper-navigation-container">
+            <div class="swiper-button-prev custom-btn-prev gallery__btn-prev"></div>
+            <div class="swiper-pagination custom-pagination gallery__swiper-pagination"></div>
+            <div class="swiper-button-next custom-btn-next gallery__btn-next"></div>
           </div>
-          <div class="gallery__slider-container">
-            <div class="swiper-navigation-container">
-              <div class="swiper-pagination custom-pagination gallery__swiper-pagination"></div>
-              <div class="swiper-button-prev custom-btn-prev gallery__btn-prev"></div>
-              <div class="swiper-button-next custom-btn-next gallery__btn-next"></div>
-            </div>
-            <div class="gallery__swiper">
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-1.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-1-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-1-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-2.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-2-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-2-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-3.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-3-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-3-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-4.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-4-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-4-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-5.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-5-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-5-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-6.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-6-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-6-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-7.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-7-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-7-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-8.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-8-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-8-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-9.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-9-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-9-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-10.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-10-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-10-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-11.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-11-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-11-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-12.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-12-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-12-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-13.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-13-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-13-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-14.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-14-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-14-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-15.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-15-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-15-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-16.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-16-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-16-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-17.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-17-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-17-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-18.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-18-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-18-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-19.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-19-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-19-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-20.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-20-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-20-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-21.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-21-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-21-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-22.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-22-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-22-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-23.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-23-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-23-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                <div class="swiper-slide gallery__slide">
-                  <button class="gallery__swiper-btn">
-                    <picture>
-                      <source srcset="/img/gallery-img-24.jpg" media="(min-width: 769px)">
-                      <source srcset="/img/gallery-img-24-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                      <img class="gallery__swiper-img" src="/img/gallery-img-24-mobile.jpg" alt="">
-                    </picture>
-                  </button>
-                </div>
-                ...
+          <div class="gallery__swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-1.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-1-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-1-mobile.jpg" alt="">
+                  </picture>
+                </button>
               </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-2.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-2-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-2-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-3.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-3-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-3-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-4.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-4-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-4-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-5.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-5-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-5-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-6.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-6-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-6-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-7.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-7-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-7-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-8.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-8-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-8-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-9.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-9-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-9-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-10.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-10-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-10-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-11.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-11-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-11-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-12.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-12-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-12-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-13.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-13-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-13-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-14.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-14-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-14-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-15.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-15-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-15-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-16.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-16-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-16-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-17.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-17-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-17-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-18.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-18-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-18-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-19.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-19-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-19-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-20.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-20-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-20-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-21.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-21-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-21-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-22.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-22-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-22-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-23.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-23-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-23-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              <div class="swiper-slide gallery__slide">
+                <button class="gallery__swiper-btn">
+                  <picture>
+                    <source srcset="/img/gallery-img-24.jpg" media="(min-width: 769px)">
+                    <source srcset="/img/gallery-img-24-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
+                    <img class="gallery__swiper-img" src="/img/gallery-img-24-mobile.jpg" alt="">
+                  </picture>
+                </button>
+              </div>
+              ...
             </div>
           </div>
         </div>
@@ -500,12 +616,10 @@
             уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
           </p>
           <div class="catalog__content">
-            <div class="catalog__artist tab-content tab-content-active" data-target="ghirlandaio-italy">
-              <figure class="catalog__figure">
-                <img class="catalog__artist-img" src="/img/artist-ghirlandaio.jpg" alt="художник Доменико Гирландайо">
-                <figcaption class="h3-reset">Доменико Гирландайо</figcaption>
-                <small class="catalog__artist-small">2 июня 1448 — 11 января 1494.</small>
-              </figure>
+            <article class="catalog__artist tab-content tab-content-active" data-target="ghirlandaio-italy">
+              <img class="catalog__artist-img" src="/img/artist-ghirlandaio.jpg" alt="художник Доменико Гирландайо">
+              <h3 class="h3-reset">Доменико Гирландайо</h3>
+              <small class="catalog__artist-small">2 июня 1448 — 11 января 1494.</small>
               <p class="p-reset">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
@@ -514,7 +628,7 @@
                 подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
                 Флоренции в костюмах того времени).
               </p>
-            </div>
+            </article>
             <div class="catalog__artist tab-content" data-target="unknown-italy">
               <img class="catalog__artist-img" src="/img/unknown-artist.jpg" alt="Художник нам неизвестен">
               <strong>Что мы о нём знаем?</strong>
@@ -524,7 +638,8 @@
               <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
             </div>
             <div id="accordion-italy" class="catalog__accordion">
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1400 по 1499 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1400 по 1499
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <ul class="catalog__item-ul ul-reset">
                   <li>
@@ -628,7 +743,8 @@
                   </li>
                 </ul>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1500 по 1599 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1500 по 1599
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -639,7 +755,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1600 по 1699 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1600 по 1699
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -650,7 +767,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1700 по 1799 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1700 по 1799
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -661,7 +779,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1800 по 1899 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1800 по 1899
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -672,7 +791,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1900 по 1999 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1900 по 1999
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -683,7 +803,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset catalog__accordion-item-last"><span class="catalog__accordion-span">C 2000 г.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset catalog__accordion-item-last"><span
+                  class="catalog__accordion-span">C 2000 г.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -705,12 +826,10 @@
             уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
           </p>
           <div class="catalog__content">
-            <div class="catalog__artist tab-content tab-content-active" data-target="ghirlandaio-rus">
-              <figure class="catalog__figure">
-                <img class="catalog__artist-img" src="/img/artist-ghirlandaio.jpg" alt="художник Доменико Гирландайо">
-                <figcaption class="h3-reset">Доменико Гирландайо</figcaption>
-                <small class="catalog__artist-small">2 июня 1448 — 11 января 1494.</small>
-              </figure>
+            <article class="catalog__artist tab-content tab-content-active" data-target="ghirlandaio-rus">
+              <img class="catalog__artist-img" src="/img/artist-ghirlandaio.jpg" alt="художник Доменико Гирландайо">
+              <h3 class="h3-reset">Доменико Гирландайо</h3>
+              <small class="catalog__artist-small">2 июня 1448 — 11 января 1494.</small>
               <p class="p-reset">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
                 продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
@@ -719,7 +838,7 @@
                 подробностями показана домашняя жизнь библейских персонажей (в их роли выступают знатные граждане
                 Флоренции в костюмах того времени).
               </p>
-            </div>
+            </article>
             <div class="catalog__artist tab-content" data-target="unknown-rus">
               <img class="catalog__artist-img" src="/img/unknown-artist.jpg" alt="Художник нам неизвестен">
               <strong>Что мы о нём знаем?</strong>
@@ -729,7 +848,8 @@
               <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
             </div>
             <div id="accordion-rus" class="catalog__accordion">
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1400 по 1499 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1400 по 1499
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <ul class="catalog__item-ul ul-reset">
                   <li>
@@ -831,7 +951,8 @@
                   </li>
                 </ul>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1500 по 1599 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1500 по 1599
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -842,7 +963,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1600 по 1699 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1600 по 1699
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -853,7 +975,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1700 по 1799 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1700 по 1799
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -864,7 +987,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1800 по 1899 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1800 по 1899
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -875,7 +999,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1900 по 1999 гг.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset"><span class="catalog__accordion-span">C 1900 по 1999
+                  гг.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -886,7 +1011,8 @@
                   <a class="artist-not-found-link a-reset" href="#gallery">В галерею</a>
                 </div>
               </div>
-              <h3 class="catalog__accordion-item h3-reset catalog__accordion-item-last"><span class="catalog__accordion-span">C 2000 г.</span></h3>
+              <h3 class="catalog__accordion-item h3-reset catalog__accordion-item-last"><span
+                  class="catalog__accordion-span">C 2000 г.</span></h3>
               <div class="catalog__accordion-content">
                 <div class="artist-not-found-img"></div>
                 <div class="artist-not-found-text">
@@ -1006,181 +1132,143 @@
     </section>
     <section id="books" class="books">
       <div class="container books__container">
-        <h2 class="books__title h2-reset">Издания</h2>
-        <div class="books__content">
-          <div class="books__left-column">
-            <h3 class="books__checkbox-heading h3-reset">Категории</h3>
-            <ul class="books__checkbox-list ul-reset">
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Бестселлеры</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Искусство</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Архитектура</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Дизайн</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Мода</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Детям</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Художественная литература</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Публицистика</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Путеводители</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Философия</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Учебная литература</span>
-                </label>
-              </li>
-              <li class="books__checkbox-item">
-                <label class="books__checkbox-label">
-                  <input class="books__checkbox" type="checkbox">
-                  <span class="books__checkbox-icon"></span>
-                  <span class="books__checkbox-text">Журналы и газеты</span>
-                </label>
-              </li>
-            </ul>
-            <h3 class="books__price-headind h3-reset">Цена</h3>
-            <div class="books__price-container price">
-              <label class="price__label-from">От
-                <input class="price__input" type="number" placeholder="50">
-              </label>
-              <label class="price__label-to">до
-                <input class="price__input" type="number" placeholder="25 000">
-              </label>
-              <span class="price__currency">руб.</span>
-            </div>
+        <div class="books__left-column">
+          <h2 class="books__title h2-reset">Издания</h2>
+          <h3 class="books__checkbox-heading h3-reset">Категории</h3>
+          <ul class="books__checkbox-list ul-reset">
+            <li class="books__checkbox-item">
+              <input id="gallery__check1" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="gallery__check1">Бестселлеры</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck2" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck2">Искусство</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck3" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck3">Архитектура</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck4" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck4">Дизайн</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck5" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck5">Мода</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck6" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck6">Детям</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck7" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck7">Художественная литература</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck8" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck8">Публицистика</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck9" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck9">Путеводители</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck10" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck10">Философия</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck11" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck11">Учебная литература</label>
+            </li>
+            <li class="books__checkbox-item">
+              <input id="booksCheck12" class="books__checkbox" type="checkbox">
+              <label class="books__checkbox-label" for="booksCheck12">Журналы и газеты</label>
+            </li>
+          </ul>
+          <h3 class="books__price-headind h3-reset">Цена</h3>
+          <div class="books__price-container price">
+            <label class="price__label-from">От
+              <input class="price__input" type="number" placeholder="50">
+            </label>
+            <label class="price__label-to">до
+              <input class="price__input" type="number" placeholder="25 000">
+            </label>
+            <span class="price__currency">руб.</span>
           </div>
-          <div class="books__slider-container">
-            <div class="swiper-navigation-container">
-              <div class="swiper-pagination custom-pagination books__swiper-pagination"></div>
-              <div class="swiper-button-prev custom-btn-prev books__btn-prev"></div>
-              <div class="swiper-button-next custom-btn-next books__btn-next"></div>
-            </div>
-            <div class="books__swiper">
-              <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-1.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Искусство цвета</strong>
-                    <span class="books__author-name">Иттен, Иоханнес</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">620 руб</span>
-                  </div>
+        </div>
+        <div class="books__slider-container">
+          <div class="swiper-navigation-container">
+            <div class="swiper-button-prev custom-btn-prev books__btn-prev"></div>
+            <div class="swiper-pagination custom-pagination books__swiper-pagination"></div>
+            <div class="swiper-button-next custom-btn-next books__btn-next"></div>
+          </div>
+          <div class="books__swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-1.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Искусство цвета</h3>
+                  <span class="books__author-name">Иттен, Иоханнес</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">620 руб</span>
                 </div>
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-2.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Типографика</strong>
-                    <span class="books__author-name">Рудер, Эмиль</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">2 450 руб</span>
-                  </div>
-                </div>
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-3.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Книга про буквы</strong>
-                    <span class="books__author-name">Гордон, Юрий</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">2 200 руб</span>
-                  </div>
-                </div>
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-4.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Николай Ильин</strong>
-                    <span class="books__author-name">Кричевский, Владимир</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">1 100 руб</span>
-                  </div>
-                </div>
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-5.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Модульные сетки в граф...</strong>
-                    <span class="books__author-name">Мюллер-Брокманн, Йозеф</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">1 450 руб</span>
-                  </div>
-                </div>
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-6.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Эволюция графических ст...</strong>
-                    <span class="books__author-name">Хеллер, Чваст</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">3 200 руб</span>
-                  </div>
-                </div>
-                <div class="swiper-slide books__card">
-                  <img class="books__card-img" src="/img/books-7.jpg" alt="Обложка книги">
-                  <div class="books__card-content">
-                    <strong class="books__naming">Искусство и визуальное в...</strong>
-                    <span class="books__author-name">Арнхейм, Рудольф</span>
-                    <a class="books__order-btn a-reset" href="#">Заказать</a>
-                    <span class="books__book-price">2 200 руб</span>
-                  </div>
-                </div>
-                ...
               </div>
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-2.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Типографика</h3>
+                  <span class="books__author-name">Рудер, Эмиль</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">2 450 руб</span>
+                </div>
+              </div>
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-3.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Книга про буквы</h3>
+                  <span class="books__author-name">Гордон, Юрий</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">2 200 руб</span>
+                </div>
+              </div>
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-4.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Николай Ильин</h3>
+                  <span class="books__author-name">Кричевский, Владимир</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">1 100 руб</span>
+                </div>
+              </div>
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-5.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Модульные сетки в граф...</h3>
+                  <span class="books__author-name">Мюллер-Брокманн, Йозеф</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">1 450 руб</span>
+                </div>
+              </div>
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-6.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Эволюция графических ст...</h3>
+                  <span class="books__author-name">Хеллер, Чваст</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">3 200 руб</span>
+                </div>
+              </div>
+              <div class="swiper-slide books__card">
+                <img class="books__card-img" src="/img/books-7.jpg" alt="Обложка книги">
+                <div class="books__card-content">
+                  <h3 class="books__naming h3-reset">Искусство и визуальное в...</h3>
+                  <span class="books__author-name">Арнхейм, Рудольф</span>
+                  <a class="books__order-btn a-reset" href="#">Заказать</a>
+                  <span class="books__book-price">2 200 руб</span>
+                </div>
+              </div>
+              ...
             </div>
           </div>
         </div>
@@ -1189,34 +1277,34 @@
     <section id="projects" class="projects">
       <div class="container projects__container">
         <h2 class="projects__title h2-reset">Проекты</h2>
-        <div class="projects__description">
+        <p class="projects__description p-reset">
           Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
           фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
           уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
           Прежде всего, постоянное <span class="nowrap-span">информационно-пропагандистское</span>
-          <div class="projects__description-tooltip">
+          <span class="projects__description-tooltip">
             <button class="projects__tooltip-marker btn-reset"></button>
-            <div class="projects__tooltip-popup">
+            <span class="projects__tooltip-popup">
               Пример современных тенденций - современная методология разработки
-            </div>
-          </div>
+            </span>
+          </span>
           обеспечение нашей деятельности однозначно фиксирует
           необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
           оппозиции могут быть рассмотрены
-          <div class="projects__description-tooltip">
+          <span class="projects__description-tooltip">
             <button class="projects__tooltip-marker btn-reset"></button>
-            <div class="projects__tooltip-popup">
+            <span class="projects__tooltip-popup">
               Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
-            </div>
-          </div>
+            </span>
+          </span>
           исключительно в разрезе
           маркетинговых и финансовых
-          <div class="projects__description-tooltip">
+          <span class="projects__description-tooltip">
             <button class="projects__tooltip-marker btn-reset"></button>
-            <div class="projects__tooltip-popup">
+            <span class="projects__tooltip-popup">
               В стремлении повысить качество
-            </div>
-          </div>
+            </span>
+          </span>
           предпосылок. Банальные, но
           неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
           которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
@@ -1224,7 +1312,7 @@
           <a class="projects__description-link a-reset" href="#">
             <span class="nowrap-span">blanchard-art.ru/projects/about</span>
           </a>
-        </div>
+        </p>
         <h3 class="projects__partners-heading h3-reset">Партнёры проектов:</h3>
         <div class="container projects__slider-container">
           <div class="projects__btn-prev"></div>
@@ -1276,10 +1364,12 @@
             <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST"
               autocomplete="on">
               <label class="contacts__form-label">
-                <input class="contacts__form-input" data-validate-field="name" name="name" type="text" placeholder="Имя*">
+                <input class="contacts__form-input" data-validate-field="name" name="name" type="text"
+                  placeholder="Имя*">
               </label>
               <label class="contacts__form-label">
-                <input class="contacts__form-input" data-validate-field="tel" name="phone" type="tel" placeholder="Телефон*">
+                <input class="contacts__form-input" data-validate-field="tel" name="phone" type="tel"
+                  placeholder="Телефон*">
               </label>
               <button class="contacts__form-btn btn-reset" type="submit">Заказать</button>
             </form>
@@ -1300,7 +1390,9 @@
   </main>
   <footer class="footer">
     <div class="container footer__container">
-      <img class="footer__logo-img" src="/img/header-logo.svg" alt="Blanchard - художественная галерея">
+      <a class="footer__logo-link logo-link" href="#">
+        <img class="footer__logo-img" src="/img/header-logo.svg" alt="Blanchard - художественная галерея">
+      </a>
       <ul class="footer__social-list ul-reset">
         <li class="footer__social-item">
           <a class="footer__social-link vkontakte" href="#"></a>
@@ -1314,145 +1406,7 @@
       </ul>
     </div>
   </footer>
-  <script src="/js/script.js"></script>
-  <script src="/js/simplebar.min.js"></script>
-  <script src="/js/inputmask.min.js"></script>
-  <script src="/js/just-validate.min.js"></script>
-  <script>
-    const swiperHero = document.querySelector('.hero__swiper');
-    const swiperGallery = document.querySelector('.gallery__swiper');
-    const swiperBooks = document.querySelector('.books__swiper');
-    const swiperProjects = document.querySelector('.projects__swiper');
 
-    new Swiper(swiperHero, {
-      // Optional parameters
-      loop: true,
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-    });
-
-    new Swiper(swiperGallery, {
-      loop: false,
-      autoHeght: false,
-      slidesPerColumn: 2,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 50,
-
-      pagination: {
-        el: '.gallery__swiper-pagination',
-        type: 'fraction',
-      },
-
-      navigation: {
-        nextEl: '.gallery__btn-next',
-        prevEl: '.gallery__btn-prev',
-      },
-    });
-
-    new Swiper(swiperBooks, {
-      // Optional parameters
-      loop: false,
-      slidesPerView: 3,
-      slidesPerGroup: 1,
-      spaceBetween: 50,
-
-      pagination: {
-        el: '.books__swiper-pagination',
-        type: 'fraction',
-      },
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.books__btn-next',
-        prevEl: '.books__btn-prev',
-      },
-    });
-
-    new Swiper(swiperProjects, {
-      // Optional parameters
-      loop: false,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 50,
-      autoHeght: false,
-
-      // Navigation arrows
-      navigation: {
-        nextEl: '.projects__btn-next',
-        prevEl: '.projects__btn-prev',
-      },
-    });
-
-    const elements = document.querySelectorAll('.custom-select');
-    elements.forEach(el => {
-      const choices = new Choices(el, {
-        searchEnabled: false,
-        itemSelectText: '',
-        silent: true,
-      })
-    });
-
-    document.querySelectorAll('.header__bottom .choices__list--dropdown .choices__list').forEach(el => {
-      new SimpleBar(el)
-    });
-
-  </script>
-  <script type="text/javascript">
-    ymaps.ready(init);
-    function init() {
-      var myMap = new ymaps.Map("map", {
-        center: [55.76306718389715, 37.63223147635113],
-        zoom: 14,
-        controls: []
-      });
-      myMap.controls.add('zoomControl');
-
-      var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
-        iconLayout: 'default#image',
-        iconImageHref: 'img/map-placemark.svg',
-        iconImageSize: [20, 20],
-        iconImageOffset: [-10, 0],
-      });
-      myMap.geoObjects.add(myPlacemark);
-    }
-  </script>
-  <script>
-    var selector = document.querySelector("input[type='tel']");
-    var im = new Inputmask("+7 (999)-999-99-99");
-
-    im.mask(selector);
-
-    new JustValidate('.contacts__form', {
-      rules: {
-        name: {
-          required: true,
-          minLength: 2,
-          maxLength: 30
-        },
-        tel: {
-          required: true,
-          function: (name, value) => {
-            const phone = selector.inputmask.unmaskedvalue()
-
-            return Number(phone) && phone.length === 10
-          }
-        },
-      },
-      messages: {
-        name: {
-          required: 'Заполните поле!',
-          minLength: 'Минимум 2 символа.',
-          maxLength: 'Максимум 30 символов.'
-        },
-
-        tel: {
-          required: 'Заполните поле!',
-          function: 'Недопустимый формат'
-        }
-      },
-    });
-  </script>
 </body>
 
 </html>
