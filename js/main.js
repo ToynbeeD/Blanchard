@@ -239,4 +239,23 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       },
     });
+
+    tippy('#projectsTooltip1', {
+      maxWidth: 264,
+      content: 'Пример современных тенденций - современная методология разработки',
+      duration: 300,
+      theme: 'blanchard',
+    });
+    tippy('#projectsTooltip2', {
+      maxWidth: 264,
+      content: 'Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции',
+      duration: 300,
+      theme: 'blanchard',
+    });
+    tippy('#projectsTooltip3', {
+      maxWidth: 264,
+      content: 'В стремлении повысить качество',
+      duration: 300,
+      theme: 'blanchard',
+    });
 })
