@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
+  document.querySelector('#burger').addEventListener('click', function() {
+    document.querySelector('#menu').classList.toggle('is-active')
+});
+
   document.querySelectorAll('.header__dropdown').forEach(function (dropdownWrapper) {
 
     const dropdownBtn = dropdownWrapper.querySelector('.header__dropdown-btn');
@@ -124,10 +128,23 @@ document.addEventListener('DOMContentLoaded', function() {
     new Swiper(swiperGallery, {
       loop: false,
       autoHeght: false,
-      slidesPerColumn: 2,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 50,
+
+      breakpoints: {
+        // when window width is >= 640px
+        640: {
+          slidesPerColumn: 2,
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 34,
+        },
+        // when window width is >= 1280px
+        1280: {
+          slidesPerColumn: 2,
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 50,
+        },
+      },
 
       pagination: {
         el: '.gallery__swiper-pagination',
@@ -143,9 +160,26 @@ document.addEventListener('DOMContentLoaded', function() {
     new Swiper(swiperBooks, {
       // Optional parameters
       loop: false,
-      slidesPerView: 3,
-      slidesPerGroup: 1,
-      spaceBetween: 50,
+
+      breakpoints: {
+        321: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 34,
+        },
+        // when window width is >= 640px
+        992: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 50,
+        },
+        // when window width is >= 1280px
+        1280: {
+          slidesPerView: 3,
+          slidesPerGroup: 1,
+          spaceBetween: 50,
+        },
+      },
 
       pagination: {
         el: '.books__swiper-pagination',
@@ -162,10 +196,27 @@ document.addEventListener('DOMContentLoaded', function() {
     new Swiper(swiperProjects, {
       // Optional parameters
       loop: false,
-      slidesPerView: 3,
-      slidesPerGroup: 3,
-      spaceBetween: 50,
       autoHeght: false,
+
+      breakpoints: {
+        321: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 34,
+        },
+        // when window width is >= 640px
+        992: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        // when window width is >= 1280px
+        1280: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 50,
+        },
+      },
 
       // Navigation arrows
       navigation: {
