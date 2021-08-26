@@ -26,6 +26,7 @@
   <script src="/js/simplebar.min.js"></script>
   <script src="/js/inputmask.min.js"></script>
   <script src="/js/just-validate.min.js"></script>
+  <script src="/js/match-media.js"></script>
   <script src="/js/main.js"></script>
 </head>
 
@@ -34,16 +35,29 @@
     <div class="header__top">
       <div class="container header__top-container">
         <button id="burger" class="header__burger btn-reset">
-          <svg width="36" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="mobile-disabled" width="36" height="29" fill="none" viewbox="0 0 36 29"
+            xmlns="http://www.w3.org/2000/svg">
             <rect width="36" height="3.65217" transform="matrix(-1 0 0 1 36 0.700012)" fill="white" />
             <path d="M28.2002 12.8739H0.00019455V16.5261H28.2002V12.8739Z" fill="white" />
             <path d="M24 25.0479H0V28.7H24V25.0479Z" fill="white" />
+          </svg>
+          <svg class="mobile-active" width="25" height="18" viewBox="0 0 25 18" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="25" height="2" transform="matrix(-1 0 0 1 25 0)" fill="white" />
+            <path d="M16 8H9.53674e-07V10H16V8Z" fill="white" />
+            <path d="M10 16H0V18H10V16Z" fill="white" />
           </svg>
         </button>
         <a class="header__logo-link logo-link" href="#">
           <img class="header__logo-img" src="/img/header-logo.svg" alt="Blanchard - художественная галерея">
         </a>
         <div id="menu" class="header__top-links">
+          <button id="burgerExit" class="burger-exit btn-reset">
+            <svg width="29" height="29" viewbox="0 0 29 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white" />
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white" />
+            </svg>
+          </button>
           <nav class="header__nav">
             <ul class="header__nav-list ul-reset">
               <li class="header__nav-item">
@@ -79,7 +93,8 @@
           </a>
         </div>
         <button class="header__search-btn header__top-search-btn btn-reset" type="submit">
-          <svg width="30" height="29" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg class="search-btn-svg" width="30" height="29" fill="none" viewbox="0 0 30 29"
+            xmlns="http://www.w3.org/2000/svg">
             <rect width="9.15446" height="2.28862"
               transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -87,6 +102,28 @@
               fill="white" />
           </svg>
         </button>
+        <div class="header__top-search-container">
+          <form class="header__search-form header__top-search-form">
+            <button class="header__search-btn header__bottom-search-btn btn-reset" type="submit"
+              aria-label="Поиск по сайту">
+              <svg width="30" height="29" viewbox="0 0 30 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="9.15446" height="2.28862"
+                  transform="matrix(-0.718931 0.695081 0.718931 0.695081 6.58154 21.0461)" fill="white" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M16.1246 24.174C10.0376 24.174 5.32763 19.2726 5.32763 13.5104C5.32763 7.74823 10.0376 2.84676 16.1246 2.84676C22.2115 2.84676 26.9215 7.74823 26.9215 13.5104C26.9215 19.2726 22.2115 24.174 16.1246 24.174ZM16.1246 26.8399C8.76285 26.8399 2.79502 20.8721 2.79502 13.5104C2.79502 6.14869 8.76285 0.180847 16.1246 0.180847C23.4863 0.180847 29.4541 6.14869 29.4541 13.5104C29.4541 20.8721 23.4863 26.8399 16.1246 26.8399Z"
+                  fill="white" />
+              </svg>
+            </button>
+            <input class="header__search-input" type="search">
+          </form>
+          <button class="search-exit btn-reset">
+            <svg class="search-exit-svg" width="29" height="29" viewbox="0 0 29 29" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <rect x="2.63623" width="37.2838" height="3.72838" transform="rotate(45 2.63623 0)" fill="white" />
+              <rect y="26.3636" width="37.2838" height="3.72838" transform="rotate(-45 0 26.3636)" fill="white" />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
     <div class="header__bottom">
@@ -319,7 +356,8 @@
           </li>
         </ul>
         <form class="header__search-form">
-          <button class="header__search-btn header__bottom-search-btn btn-reset" type="submit" aria-label="Поиск по сайту">
+          <button class="header__search-btn header__bottom-search-btn btn-reset" type="submit"
+            aria-label="Поиск по сайту">
             <svg class="header__search-svg" width="23" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
               <rect width="6.8678" height="1.71695"
                 transform="matrix(-0.718931 0.695081 0.718931 0.695081 4.9375 15.6534)" fill="white" />
@@ -396,7 +434,7 @@
           </p>
         </div>
         <div class="gallery__slider-container">
-          <div class="swiper-navigation-container">
+          <div class="swiper-navigation-container gallery__swiper-navigation-container">
             <div class="swiper-button-prev custom-btn-prev gallery__btn-prev"></div>
             <div class="swiper-pagination custom-pagination gallery__swiper-pagination"></div>
             <div class="swiper-button-next custom-btn-next gallery__btn-next"></div>
@@ -636,20 +674,24 @@
           <h2 class="catalog__title h2-reset">Каталог</h2>
           <ul class="catalog__languages-list ul-reset" aria-label="Выбор языка">
             <li class="catalog__languages-item">
-              <button class="catalog__languages-btn btn-reset icon-france" data-path="unknown-lang" aria-label="Французский язык"></button>
+              <button class="catalog__languages-btn btn-reset icon-france" data-path="unknown-lang"
+                aria-label="Французский язык"></button>
             </li>
             <li class="catalog__languages-item">
-              <button class="catalog__languages-btn btn-reset icon-germany" data-path="unknown-lang" aria-label="Немецкий язык"></button>
+              <button class="catalog__languages-btn btn-reset icon-germany" data-path="unknown-lang"
+                aria-label="Немецкий язык"></button>
             </li>
             <li class="catalog__languages-item">
               <button class="catalog__languages-btn btn-reset icon-italy catalog__languages-btn-active"
                 data-path="italy" aria-label="Итальянский язык"></button>
             </li>
             <li class="catalog__languages-item">
-              <button class="catalog__languages-btn btn-reset icon-rus" data-path="rus" aria-label="Русский язык"></button>
+              <button class="catalog__languages-btn btn-reset icon-rus" data-path="rus"
+                aria-label="Русский язык"></button>
             </li>
             <li class="catalog__languages-item">
-              <button class="catalog__languages-btn btn-reset icon-belgium" data-path="unknown-lang" aria-label="Бельгийский язык"></button>
+              <button class="catalog__languages-btn btn-reset icon-belgium" data-path="unknown-lang"
+                aria-label="Бельгийский язык"></button>
             </li>
           </ul>
         </div>
@@ -1089,7 +1131,7 @@
                   <source srcset="/img/events-img-1.jpg" media="(min-width: 1025px)">
                   <source srcset="/img/events-img-1-1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
                   <source srcset="/img/events-img-1-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                  <img class="events__card-img" src="/img/events-img-1.jpg" alt="Фото с события">
+                  <img class="events__card-img" src="/img/events-img-1-1024.jpg" alt="Фото с события">
                 </picture>
                 <figcaption class="events__card-figcaption">
                   Музей им. Щусева
@@ -1113,7 +1155,7 @@
                   <source srcset="/img/events-img-2.jpg" media="(min-width: 1025px)">
                   <source srcset="/img/events-img-2-1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
                   <source srcset="/img/events-img-2-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                  <img class="events__card-img" src="/img/events-img-2.jpg" alt="Фото с события">
+                  <img class="events__card-img" src="/img/events-img-2-1024.jpg" alt="Фото с события">
                 </picture>
                 <figcaption class="events__card-figcaption">
                   ММОМА
@@ -1137,7 +1179,7 @@
                   <source srcset="/img/events-img-3.jpg" media="(min-width: 1025px)">
                   <source srcset="/img/events-img-3-1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
                   <source srcset="/img/events-img-3-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                  <img class="events__card-img" src="/img/events-img-3.jpg" alt="Фото с события">
+                  <img class="events__card-img" src="/img/events-img-3-1024.jpg" alt="Фото с события">
                 </picture>
                 <figcaption class="events__card-figcaption">
                   Еврейский музей
@@ -1161,7 +1203,7 @@
                   <source srcset="/img/events-img-4.jpg" media="(min-width: 1025px)">
                   <source srcset="/img/events-img-4-1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
                   <source srcset="/img/events-img-4-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                  <img class="events__card-img" src="/img/events-img-4.jpg" alt="Фото с события">
+                  <img class="events__card-img" src="/img/events-img-4-1024.jpg" alt="Фото с события">
                 </picture>
                 <figcaption class="events__card-figcaption">
                   Третьяковка на Крымском валу
@@ -1184,7 +1226,7 @@
                   <source srcset="/img/events-img-5.jpg" media="(min-width: 1025px)">
                   <source srcset="/img/events-img-5-1024.jpg" media="(max-width: 1024px) and (min-width: 769px)">
                   <source srcset="/img/events-img-5-768.jpg" media="(max-width: 768px) and (min-width: 321px)">
-                  <img class="events__card-img" src="/img/events-img-5.jpg" alt="Фото с события">
+                  <img class="events__card-img" src="/img/events-img-5-1024.jpg" alt="Фото с события">
                 </picture>
                 <figcaption class="events__card-figcaption">
                   ММАМ
@@ -1202,6 +1244,7 @@
             </div>
           </li>
         </ul>
+        <div class="swiper-pagination events__pagination"></div>
         <button class="events__btn btn-reset">Все события</button>
       </div>
     </section>
@@ -1272,13 +1315,13 @@
           </div>
         </div>
         <div class="books__slider-container">
-          <div class="swiper-navigation-container">
+          <div class="books__swiper-navigation-container swiper-navigation-container">
             <div class="swiper-button-prev custom-btn-prev books__btn-prev"></div>
             <div class="swiper-pagination custom-pagination books__swiper-pagination"></div>
             <div class="swiper-button-next custom-btn-next books__btn-next"></div>
           </div>
-          <div class="books__swiper">
-            <div class="swiper-wrapper">
+          <div class="books__swiper books__swiper-mobile">
+            <div class="swiper-wrapper books__swiper-wrapper-mobile">
               <!-- Slides -->
               <div class="swiper-slide books__card">
                 <img class="books__card-img" src="/img/books-1.jpg" alt="Обложка книги">
@@ -1311,7 +1354,8 @@
                 <img class="books__card-img" src="/img/books-4.jpg" alt="Обложка книги">
                 <div class="books__card-content">
                   <h3 class="books__naming h3-reset">Николай Ильин</h3>
-                  <span class="books__author-name">Кричевский, Владимир</span>
+                  <span class="books__author-name mobile-disabled">Кричевский, Владимир</span>
+                  <span class="books__author-name mobile-active">Кричевский, Влади...</span>
                   <a class="books__order-btn a-reset" href="#">Заказать</a>
                   <span class="books__book-price">1 100 руб</span>
                 </div>
@@ -1319,8 +1363,10 @@
               <div class="swiper-slide books__card">
                 <img class="books__card-img" src="/img/books-5.jpg" alt="Обложка книги">
                 <div class="books__card-content">
-                  <h3 class="books__naming h3-reset">Модульные сетки в граф...</h3>
-                  <span class="books__author-name">Мюллер-Брокманн, Йозеф</span>
+                  <h3 class="books__naming h3-reset mobile-disabled">Модульные сетки в граф...</h3>
+                  <h3 class="books__naming h3-reset mobile-active">Модульные сетки...</h3>
+                  <span class="books__author-name mobile-disabled">Мюллер-Брокманн, Йозеф</span>
+                  <span class="books__author-name mobile-active">Мюллер-Брокманн...</span>
                   <a class="books__order-btn a-reset" href="#">Заказать</a>
                   <span class="books__book-price">1 450 руб</span>
                 </div>
@@ -1328,7 +1374,8 @@
               <div class="swiper-slide books__card">
                 <img class="books__card-img" src="/img/books-6.jpg" alt="Обложка книги">
                 <div class="books__card-content">
-                  <h3 class="books__naming h3-reset">Эволюция графических ст...</h3>
+                  <h3 class="books__naming h3-reset mobile-disabled">Эволюция графических ст...</h3>
+                  <h3 class="books__naming h3-reset mobile-active">Эволюция графич...</h3>
                   <span class="books__author-name">Хеллер, Чваст</span>
                   <a class="books__order-btn a-reset" href="#">Заказать</a>
                   <span class="books__book-price">3 200 руб</span>
@@ -1337,7 +1384,8 @@
               <div class="swiper-slide books__card">
                 <img class="books__card-img" src="/img/books-7.jpg" alt="Обложка книги">
                 <div class="books__card-content">
-                  <h3 class="books__naming h3-reset">Искусство и визуальное в...</h3>
+                  <h3 class="books__naming h3-reset mobile-disabled">Искусство и визуальное в...</h3>
+                  <h3 class="books__naming h3-reset mobile-active">Искусство и визуа...</h3>
                   <span class="books__author-name">Арнхейм, Рудольф</span>
                   <a class="books__order-btn a-reset" href="#">Заказать</a>
                   <span class="books__book-price">2 200 руб</span>
@@ -1372,30 +1420,30 @@
           обеспечение нашей деятельности однозначно фиксирует
           необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей
           оппозиции могут быть <span class="nowrap-span">рассмотрены
-          <button id="projectsTooltip2" class="projects__tooltip-btn btn-reset">
-            <svg class="tooltip-svg" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="tooltip-path-circle"
-                d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
-                stroke="#9D5CD0" />
-              <path class="tooltip-path-i"
-                d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
-                fill="black" />
-            </svg>
-          </button>
-        </span>
+            <button id="projectsTooltip2" class="projects__tooltip-btn btn-reset">
+              <svg class="tooltip-svg" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="tooltip-path-circle"
+                  d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
+                  stroke="#9D5CD0" />
+                <path class="tooltip-path-i"
+                  d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
+                  fill="black" />
+              </svg>
+            </button>
+          </span>
           исключительно в разрезе
           маркетинговых и <span class="nowrap-span">финансовых
-          <button id="projectsTooltip3" class="projects__tooltip-btn btn-reset">
-            <svg class="tooltip-svg" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path class="tooltip-path-circle"
-                d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
-                stroke="#9D5CD0" />
-              <path class="tooltip-path-i"
-                d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
-                fill="black" />
-            </svg>
-          </button>
-        </span>
+            <button id="projectsTooltip3" class="projects__tooltip-btn btn-reset">
+              <svg class="tooltip-svg" width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="tooltip-path-circle"
+                  d="M15.5 8C15.5 12.1421 12.1421 15.5 8 15.5C3.85786 15.5 0.5 12.1421 0.5 8C0.5 3.85786 3.85786 0.5 8 0.5C12.1421 0.5 15.5 3.85786 15.5 8Z"
+                  stroke="#9D5CD0" />
+                <path class="tooltip-path-i"
+                  d="M7.26154 6.4551H8.73846V13H7.26154V6.4551ZM8 4.90259C7.71282 4.90259 7.4718 4.81126 7.27692 4.62861C7.09231 4.44597 7 4.22273 7 3.9589C7 3.69508 7.09231 3.47184 7.27692 3.28919C7.4718 3.0964 7.71282 3 8 3C8.28718 3 8.52308 3.09132 8.70769 3.27397C8.90256 3.44647 9 3.66464 9 3.92846C9 4.20243 8.90256 4.43582 8.70769 4.62861C8.52308 4.81126 8.28718 4.90259 8 4.90259Z"
+                  fill="black" />
+              </svg>
+            </button>
+          </span>
           предпосылок. Банальные, но
           неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям,
           которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости.
@@ -1449,8 +1497,8 @@
       <div class="container contacts__container">
         <div class="contacts__left-column">
           <div class="contacts__left-container">
-            <strong class="contacts__address-naming h3-reset">Шоурум №4</strong>
-            <address class="contacts__address">Леонтьевский переулок, дом 5/1</address>
+            <strong class="contacts__address-naming h3-reset mobile-disabled">Шоурум №4</strong>
+            <address class="contacts__address mobile-disabled">Леонтьевский переулок, дом 5/1</address>
             <h3 class="contacts__left-heading h3-reset">Заказать обратный звонок</h3>
             <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST"
               autocomplete="on">
@@ -1462,9 +1510,10 @@
                 <input class="contacts__form-input" data-validate-field="tel" name="phone" type="tel"
                   placeholder="Телефон*">
               </label>
-              <button class="contacts__form-btn btn-reset" type="submit" aria-label="Заказать обратный звонок">Заказать</button>
+              <button class="contacts__form-btn btn-reset" type="submit"
+                aria-label="Заказать обратный звонок">Заказать</button>
             </form>
-            <h3 class="contacts__left-heading h3-reset">Связаться в один клик</h3>
+            <h3 class="contacts__left-heading messengers-heading h3-reset">Связаться в один клик</h3>
             <ul class="contacts__social-list ul-reset" aria-label="Связаться с нами в один клик">
               <li class="contacts__social-item">
                 <a class="contacts__social-link whatsapp" href="#" aria-label="Вотс ап"></a>
@@ -1476,6 +1525,10 @@
           </div>
         </div>
         <div id="map" class="contacts__map-container"></div>
+        <div class="contacts__address-container mobile-active">
+          <strong class="contacts__address-naming h3-reset">Шоурум №4</strong>
+          <address class="contacts__address">Леонтьевский переулок, дом 5/1</address>
+        </div>
       </div>
     </section>
   </main>

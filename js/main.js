@@ -1,7 +1,21 @@
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('#burger').addEventListener('click', function() {
-    document.querySelector('#menu').classList.toggle('is-active')
-});
+    document.querySelector('#menu').classList.add('is-active')
+  });
+
+  document.querySelector('#burgerExit').addEventListener('click', function() {
+    document.querySelector('#menu').classList.remove('is-active')
+  });
+
+  document.querySelector('.header__top-search-btn').addEventListener('click', function() {
+    document.querySelector('.header__top-search-container').classList.add('form-active');
+    document.querySelector('.search-btn-svg').style.visibility = 'hidden';
+  });
+
+  document.querySelector('.search-exit').addEventListener('click', function() {
+    document.querySelector('.header__top-search-container').classList.remove('form-active');
+    document.querySelector('.search-btn-svg').style.visibility = 'visible';
+  });
 
   document.querySelectorAll('.header__dropdown').forEach(function (dropdownWrapper) {
 
@@ -97,6 +111,13 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector('.events__btn').classList.add('events__btn-disabled')
   });
 
+  document.querySelector('.books__checkbox-heading').addEventListener('click', function() {
+    document.querySelectorAll('.books__checkbox-label').forEach(function(event) {
+      event.classList.toggle('active-checkbox')
+    })
+    document.querySelector('.books__checkbox-heading').classList.toggle('checkbox-heading-active')
+  });
+
   $(function () {
     $("#accordion-rus").accordion({
       collapsible: true,
@@ -114,6 +135,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
     const swiperHero = document.querySelector('.hero__swiper');
+    const swiperEvent = document.querySelector('.event__swiper');
     const swiperGallery = document.querySelector('.gallery__swiper');
     const swiperBooks = document.querySelector('.books__swiper');
     const swiperProjects = document.querySelector('.projects__swiper');
@@ -125,20 +147,40 @@ document.addEventListener('DOMContentLoaded', function() {
       slidesPerGroup: 1,
     });
 
+    new Swiper(swiperEvent, {
+      // Optional parameters
+      loop: false,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 15,
+
+      pagination: {
+        el: '.events__pagination',
+        clickable: true,
+      },
+    });
+
     new Swiper(swiperGallery, {
       loop: false,
       autoHeght: false,
 
       breakpoints: {
-        // when window width is >= 640px
-        640: {
+        320: {
+          slidesPerColumn: 1,
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+          initialSlide: 2,
+        },
+        // when window width is >= 768px
+        601: {
           slidesPerColumn: 2,
           slidesPerView: 2,
           slidesPerGroup: 2,
           spaceBetween: 34,
         },
-        // when window width is >= 1280px
-        1280: {
+        // when window width is >= 1201px
+        1201: {
           slidesPerColumn: 2,
           slidesPerView: 3,
           slidesPerGroup: 3,
@@ -160,21 +202,22 @@ document.addEventListener('DOMContentLoaded', function() {
     new Swiper(swiperBooks, {
       // Optional parameters
       loop: false,
+      autoHeght: false,
 
       breakpoints: {
-        321: {
+        601: {
           slidesPerView: 2,
           slidesPerGroup: 1,
           spaceBetween: 34,
         },
-        // when window width is >= 640px
+        // when window width is >= 992px
         992: {
           slidesPerView: 2,
           slidesPerGroup: 1,
           spaceBetween: 50,
         },
-        // when window width is >= 1280px
-        1280: {
+        // when window width is >= 1201px
+        1201: {
           slidesPerView: 3,
           slidesPerGroup: 1,
           spaceBetween: 50,
@@ -199,7 +242,12 @@ document.addEventListener('DOMContentLoaded', function() {
       autoHeght: false,
 
       breakpoints: {
-        321: {
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+        },
+
+        601: {
           slidesPerView: 2,
           slidesPerGroup: 2,
           spaceBetween: 34,
@@ -210,8 +258,8 @@ document.addEventListener('DOMContentLoaded', function() {
           slidesPerGroup: 2,
           spaceBetween: 50,
         },
-        // when window width is >= 1280px
-        1280: {
+        // when window width is >= 1201px
+        1201: {
           slidesPerView: 3,
           slidesPerGroup: 3,
           spaceBetween: 50,
