@@ -36,6 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     };
   myFunc(mediaQuery);
+
   document.querySelector('#burger').addEventListener('click', function() {
     document.querySelector('#menu').classList.add('is-active')
   });
