@@ -37,6 +37,21 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   myFunc(mediaQuery);
 
+  var changeScreen = window.matchMedia("screen and (max-width: 1200px)");
+  changeScreen.addListener(myFunction);
+
+  function myFunction(change) {
+      if (change.matches) {
+        var h = hero.offsetHeight;
+        var blockHeight = document.getElementById('menu');
+
+        blockHeight = h;
+        blockHeight = blockHeight + "px";
+        menu.style.height = blockHeight;
+      }
+    };
+    myFunction(changeScreen);
+
   document.querySelector('#burger').addEventListener('click', function() {
     document.querySelector('#menu').classList.add('is-active')
   });
