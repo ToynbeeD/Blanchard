@@ -405,6 +405,70 @@ html, body {
   background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-4.jpg);
 }
 
+.mone {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-mone.jpg);
+}
+
+.sislei {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-sislei.jpg);
+}
+
+.mane {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-mane.jpg);
+}
+
+.renuar {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-renuar.jpg);
+}
+
+.vangog {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-vangog.jpg);
+}
+
+.sezann {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-sezann.jpg);
+}
+
+.gogen {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-gogen.jpg);
+}
+
+.sera {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-sera.jpg);
+}
+
+.kandinsky {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-kandinsky.jpg);
+}
+
+.marinetti {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-marinetti.jpg);
+}
+
+.malevich {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-malevich.jpg);
+}
+
+.picasso {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-picasso.jpg);
+}
+
+.karra {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-karra.jpg);
+}
+
+.pratella {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-pratella.jpg);
+}
+
+.severini {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-severini.jpg);
+}
+
+.balla {
+  background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url(/img/dropdown-back-balla.jpg);
+}
+
 .header__dropdown-link {
   position: relative;
   display: block;

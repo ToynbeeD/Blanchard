@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.artist-tabs-btn').forEach(function(artistTabsBtn) {
     artistTabsBtn.addEventListener('click', function(event) {
 
-      document.querySelectorAll('.catalog__item-ul-btn').forEach(function(tabContent) {
+      document.querySelectorAll('.artist-active-btn').forEach(function(tabContent) {
         tabContent.classList.remove('artist-active-btn')
       })
       event.target.classList.add('artist-active-btn')
@@ -237,6 +237,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     new Swiper(swiperHero, {
       // Optional parameters
+      autoplay: {
+        delay: 3000,
+      },
+      effect: 'fade',
       loop: true,
       slidesPerView: 1,
       slidesPerGroup: 1,
