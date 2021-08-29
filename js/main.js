@@ -37,6 +37,25 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   myFunc(mediaQuery);
 
+  var scrollScreen = window.matchMedia("screen and (max-width: 992px)");
+  scrollScreen.addListener(scrollFunction);
+
+  function scrollFunction(scrolling) {
+      if (scrolling.matches) {
+        document.querySelectorAll('.catalog__item-ul-btn').forEach(function(scroll) {
+          scroll.addEventListener('click', function() {
+            setTimeout(function() {
+              document.querySelector('.tab-content-active .anchor').scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              })
+            }, 50);
+          })
+        });
+      }
+    };
+    scrollFunction(scrollScreen);
+
   var changeScreen = window.matchMedia("screen and (max-width: 1200px)");
   changeScreen.addListener(myFunction);
 
@@ -50,7 +69,30 @@ document.addEventListener('DOMContentLoaded', function() {
         menu.style.height = blockHeight;
       }
     };
-    myFunction(changeScreen);
+  myFunction(changeScreen);
+
+  document.querySelectorAll('.gallery__swiper-btn').forEach(function(galleryBtn) {
+    galleryBtn.addEventListener('click', function() {
+      document.querySelector('.body').classList.add('scroll-off')
+    })
+  });
+
+  document.querySelectorAll('.popup__exit').forEach(function(popupExit) {
+    popupExit.addEventListener('click', function() {
+      document.querySelector('.body').classList.remove('scroll-off');
+      document.querySelector('.popup-active').classList.remove('popup-active');
+    })
+  });
+
+  document.querySelector('#malevich').addEventListener('click', function() {
+    document.querySelector('#malevichPopup').classList.add('popup-active')
+  });
+
+  document.querySelectorAll('.unknown-picture-btn').forEach(function(unknownPicture) {
+    unknownPicture.addEventListener('click', function() {
+      document.querySelector('.unknown-picture').classList.add('popup-active');
+    })
+  });
 
   document.querySelector('#burger').addEventListener('click', function() {
     document.querySelector('#menu').classList.add('is-active')
@@ -113,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         dropdownBtn.classList.remove('header__dropdown-btn-active');
       }
     })
-  })
+  });
 
   document.querySelectorAll('.catalog__languages-btn').forEach(function(languagesBtn) {
     languagesBtn.addEventListener('click', function(event) {
