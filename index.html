@@ -1626,14 +1626,16 @@
             <strong class="contacts__address-naming h3-reset mobile-disabled">Шоурум №4</strong>
             <address class="contacts__address mobile-disabled">Леонтьевский переулок, дом 5/1</address>
             <h3 class="contacts__left-heading h3-reset">Заказать обратный звонок</h3>
-            <form class="contacts__form" action="https://jsonplaceholder.typicode.com/posts" method="POST"
+            <form class="contacts__form" action="mail.php" enctype="multipart/form-data" method="POST"
               autocomplete="on">
+              <input type="hidden" name="admin_email[]" value="newlife_kod@mail.ru">
+		          <input type="hidden" name="form_subject" value="Новая заявка">
               <label class="contacts__form-label" aria-label="Введите имя">
-                <input class="contacts__form-input" data-validate-field="name" name="name" type="text"
+                <input class="contacts__form-input" data-validate-field="name" name="Name" type="text"
                   placeholder="Имя*">
               </label>
               <label class="contacts__form-label" aria-label="Введите телефон">
-                <input class="contacts__form-input" data-validate-field="tel" name="phone" type="tel"
+                <input class="contacts__form-input" data-validate-field="tel" name="Phone" type="tel"
                   placeholder="Телефон*">
               </label>
               <button class="contacts__form-btn btn-reset" type="submit"
